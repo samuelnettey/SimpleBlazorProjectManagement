@@ -1,0 +1,27 @@
+﻿<h1 style="color:@Colour">
+    @Title
+ </h1>
+
+<p>
+    <img @attributes="AdditionalAttributes"  class="img-fluid"/>
+</p>
+
+@code {
+
+    // One Way Binding
+    [Parameter]
+    public string Title { get; set; }
+
+    //used in adding addtion attributes to an HTML tag in the component like src and class for the image Tag: See Usage::::
+
+    [Parameter(CaptureUnmatchedValues =true)]
+    public Dictionary<string, object> AdditionalAttributes { get; set; }
+
+
+    //This indicated it will be recieving values from a parent component
+    //When this is used [CascadingParameter(Name ="HeadingColour")] Blazor would automatically look for where it ir comming from and set it where its beign required
+     [CascadingParameter(Name ="HeadingColour")]
+     public string Colour { get; set; }
+
+
+}
