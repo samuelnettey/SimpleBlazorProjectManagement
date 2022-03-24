@@ -1,2 +1,2 @@
 # SimpleBlazorProjectManagement
-Building a simple Blazor CRUD App
+Building a simple Blazor WASM CRUD App
